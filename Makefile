@@ -28,7 +28,7 @@ x86: docker-images/x86_64.tar scripts/embassy.js
 	start-sdk pack
 
 scripts/embassy.js: $(TS_FILES)
-	deno run --allow-read --allow-write --allow-env --allow-net scripts/bundle.ts
+	deno run --allow-read --allow-write --allow-env --allow-net
 
 docker-images/x86_64.tar: Dockerfile docker_entrypoint.sh
 	mkdir -p docker-images
