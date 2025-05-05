@@ -1,21 +1,19 @@
-id: uptime-kuma
-title: "Uptime Kuma"
+id: fresh-rss
+title: "FreshRSS"
 version: 1.23.16
 release-notes: |
-  * Update to Uptime Kuma 1.23.16
-  * [1.23.15 changelog](https://github.com/louislam/uptime-kuma/releases/tag/1.23.15)
-  * [1.23.16 changelog](https://github.com/louislam/uptime-kuma/releases/tag/1.23.16)
+  * Release Notes: https://github.com/FreshRSS/FreshRSS/releases/tag/1.26.2
 license: MIT
-wrapper-repo: "https://github.com/remcoros/uptime-kuma-startos"
-upstream-repo: "https://github.com/louislam/uptime-kuma"
-support-site: "https://github.com/louislam/uptime-kuma/issues"
-marketing-site: "https://github.com/louislam/uptime-kuma"
-donation-url: "https://opencollective.com/uptime-kuma"
+wrapper-repo: "https://github.com/copy2018/FreshRSS-startos"
+upstream-repo: "https://github.com/FreshRSS/FreshRSS"
+support-site: "https://github.com/FreshRSS/FreshRSS"
+marketing-site: "https://freshrss.org"
+donation-url: "https://liberapay.com/FreshRSS"
 build: ["make"]
 description:
-  short: Uptime Kuma - A fancy self-hosted monitoring tool
+  short: FreshRSS - A self-hosted RSS feed aggregator
   long: |
-    Uptime Kuma is an easy-to-use self-hosted monitoring tool. It allows you to monitor the uptime of your websites, servers, and applications, providing real-time notifications and detailed reports. With a sleek and user-friendly interface, Uptime Kuma ensures you stay informed about the status of your critical systems effortlessly.
+    FreshRSS is an RSS aggregator and reader. It enables you to seamlessly read and follow content from multiple websites at a glance without the need to browse from one website to another.
 assets:
   license: LICENSE
   icon: icon.png
@@ -34,7 +32,7 @@ hardware-requirements:
     - aarch64
 health-checks:
   web-ui:
-    name: Uptime Kuma User Interface
+    name: FreshRSS User Interface
     success-message: Ready to be visited in a web browser
     type: script
 config: ~
@@ -45,7 +43,7 @@ volumes:
 interfaces:
   main:
     name: User Interface
-    description: Uptime Kuma Web user interface
+    description: FreshRSS Web user interface
     tor-config:
       port-mapping:
         80: "3001"
