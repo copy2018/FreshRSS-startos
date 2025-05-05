@@ -1,1 +1,1 @@
-start-sdk pack
+make
