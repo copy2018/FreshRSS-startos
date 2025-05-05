@@ -1,6 +1,6 @@
 #!/bin/sh
 echo
-echo "Starting Uptime Kuma..."
+echo "Starting FreshRSS..."
 echo
 
 cd /app 
