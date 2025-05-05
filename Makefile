@@ -27,9 +27,6 @@ arm: docker-images/aarch64.tar scripts/embassy.js
 x86: docker-images/x86_64.tar scripts/embassy.js
 	start-sdk pack
 
-scripts/embassy.js: $(TS_FILES)
-	deno run --allow-read --allow-write --allow-env --allow-net
-
 docker-images/x86_64.tar: Dockerfile docker_entrypoint.sh
 	mkdir -p docker-images
 	docker buildx build --tag start9/$(PKG_ID)/main:$(PKG_VERSION) --platform=linux/amd64 --build-arg PLATFORM=amd64 -o type=docker,dest=docker-images/x86_64.tar .
