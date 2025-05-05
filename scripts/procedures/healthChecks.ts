@@ -1,5 +1,5 @@
 import { types as T, healthUtil } from "../deps.ts";
 
 export const health: T.ExpectedExports.health = {
-  "web-ui": healthUtil.checkWebUrl("http://FreshRSS.embassy:3002")
+  "web-ui": healthUtil.checkWebUrl("http://FreshRSS.embassy:80")
 }
