@@ -1,5 +1,7 @@
 FROM debian:12-slim
 
+RUN git clone https://github.com/FreshRSS/FreshRSS.git .
+
 ENV TZ=UTC
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
@@ -12,8 +14,6 @@ RUN apt-get update && \
 	php-curl php-gmp php-intl php-mbstring php-xml php-zip \
 	php-sqlite3 php-mysql php-pgsql && \
 	rm -rf /var/lib/apt/lists/*
-
-RUN git clone https://github.com/FreshRSS/FreshRSS.git .
 
 RUN mkdir -p /var/www/FreshRSS/ /run/apache2/
 WORKDIR /var/www/FreshRSS
