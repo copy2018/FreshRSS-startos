@@ -33,4 +33,4 @@ docker-images/x86_64.tar: Dockerfile docker_entrypoint.sh
 	docker buildx build --tag start9/$(PKG_ID)/main:$(PKG_VERSION) --platform=linux/amd64 --build-arg ARCH=x86_64 -o type=docker,dest=docker-images/x86_64.tar .
 
 scripts/embassy.js: $(TS_FILES)
-	deno run --allow-read --allow-write --allow-env --allow-net scripts/bundle.ts
+	deno run --allow-read --allow-write --allow-env --allow-net
