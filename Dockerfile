@@ -13,6 +13,8 @@ RUN apt-get update && \
 	php-sqlite3 php-mysql php-pgsql && \
 	rm -rf /var/lib/apt/lists/*
 
+RUN git clone https://github.com/FreshRSS/FreshRSS.git .
+
 RUN mkdir -p /var/www/FreshRSS/ /run/apache2/
 WORKDIR /var/www/FreshRSS
 
