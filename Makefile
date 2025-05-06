@@ -21,7 +21,7 @@ verify: $(PKG_ID).s9pk
 install: $(PKG_ID).s9pk
 	start-cli package install $(PKG_ID).s9pk
 
-$(PKG_ID).s9pk: manifest.yaml LICENSE docs/instructions.md icon.png scripts/embassy.js docker-images/aarch64.tar docker-images/x86_64.tar
+$(PKG_ID).s9pk: manifest.yaml LICENSE instructions.md icon.png scripts/embassy.js docker-images/aarch64.tar docker-images/x86_64.tar
 	start-sdk pack
 
 docker-images/aarch64.tar: Dockerfile docker_entrypoint.sh scripts/*.sh assets/*
