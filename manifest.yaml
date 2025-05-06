@@ -1,6 +1,6 @@
 id: fresh-rss
 title: "FreshRSS"
-version: 1.23.16
+version: 1.26.2
 release-notes: |
   * Release Notes: https://github.com/FreshRSS/FreshRSS/releases/tag/1.26.2
 license: MIT
